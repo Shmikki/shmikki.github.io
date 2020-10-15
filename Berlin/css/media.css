@@ -1,0 +1,44 @@
+@media(min-width: 600px) and (max-width:1140px){
+    .header-content{
+        width: 100%;
+        font-size: 20px;
+        margin-bottom: 50px;
+    }
+
+    .header-content__slogan{
+        font-size: 25px;
+    }
+
+    .quality-list{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ver-line{
+        display: none;
+    }
+
+    .statistics-content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .manage{
+        margin-top:50px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .statistics__images{
+        margin-right: 30%;
+    }
+
+    .manage__title{
+        text-align: center;
+    }
+
+    .manage__button{
+        margin:0 auto;
+    }
+}
