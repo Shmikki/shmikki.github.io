@@ -1,5 +1,5 @@
 body{
-    max-width: 1600px;
+    max-width: 100%;
     margin:0 auto;
     padding: 0;
     font-family: 'Inter', sans-serif;
@@ -17,6 +17,7 @@ body{
 
 .container{
     width: 75%;
+    height: 100%;
     margin:0 auto;
 }
 
@@ -57,10 +58,14 @@ body{
     margin:0 auto;
 }
 
+.title{
+    font-size: 38px;
+    line-height: 50px;
+    font-weight: 700;
+}
+
 .header-content__slogan{
-    font-size: 30px;
     color: #ffff;
-    font-weight: bold;
     text-align: center;
     margin-bottom: 5px;
 }
@@ -116,25 +121,24 @@ body{
 }
 
 .circles{
-    position: relative;
     margin-bottom: 30px;
 }
 
 .cart__big-circle{
+    position: absolute;
+    top:-20px;
+    left: -20px;
     width: 50px;
     height: 50px;
-    opacity: 0.06;
     border-radius: 50%;
 }
 
 .cart__big-circle_background_red{
-    background: #FC5C65;
+    background: rgba(252, 92, 101, 0.06);
 }
 
 .cart__small-circle{
-    position: absolute;
-    top:40%;
-    left: 40%;
+    position: relative;
     width: 10px;
     height: 10px;
     border-radius:50%;
@@ -168,15 +172,15 @@ body{
 }
 
 .cart__small-circle_background_blue{
-    background: #50E3C2;;
+    background: #50E3C2;
 }
 
 .cart__big-circle_background_blue{
-    background: #50E3C2;;
+    background: rgba(80, 227, 194, 0.06);
 }
 
 .cart__big-circle_background_purple{
-    background: #A665FB;
+    background: rgba(166, 101, 251, 0.06);
 }
 
 .cart__small-circle_background_purple{
@@ -196,12 +200,15 @@ body{
 }
 
 .statistics__images{
-    position: relative;
     margin-right: 360px;
-    height: 460px;
 }
 
-.bitmap{
+.images_relative{
+    position: relative;
+    height: 460px
+}
+
+.img_box-shadow{
     box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1033);
 }
 
@@ -210,14 +217,6 @@ body{
     top:100px;
     left:130px;
     z-index: 500;
-    box-shadow: 0px 22px 54px 0px rgba(0, 0, 0, 0.136);
-
-}
-
-.manage__title{
-    font-size: 38px;
-    line-height: 50px;
-    font-weight: 700;
 }
 
 .manage__description{
@@ -229,4 +228,270 @@ body{
 
 .button-link_background{
     background:rgba(80, 227, 194, .14);
+}
+
+.activity{
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.activity-content{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.build{
+align-items: center;
+    width: 436px;
+    margin-right: 85px;
+}
+
+.activity__images{
+    height: 409px;
+}
+
+.activity__img{
+    margin-right: 70px;
+}
+
+.power{
+    position: absolute;
+    top:65px;
+    left: 224px;
+    z-index: -1;
+}
+
+.helpSuccessful{
+    background-image: url("../img/roomVideoBG.png");
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-size: cover;
+    position: relative;
+}
+
+.helpSuccessful:after{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(34, 45, 61, 0.7);
+    z-index: 2;
+}
+
+.helpSuccessful-content{
+    position: relative;
+    color:#ffff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    z-index: 3;
+    width: 60%;
+    margin:0 auto;
+}
+
+.button-video{
+    margin-top: 120px;
+    position: relative;
+    margin-bottom: 54px;
+    cursor: pointer;
+}
+
+.button__circle{
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.19);
+    width: 96px;
+    height: 96px;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.button-play{
+    position: absolute;
+    border: 10px solid transparent;
+    border-left: 15px solid rgba(80, 227, 194, 1);
+    top:38px;
+    left:42px;
+}
+
+.helpSuccessful__description-text{
+    text-align: center;
+}
+
+.video{
+    margin:0 auto;
+    display: block;
+    width:400px;
+    height: 300px;
+}
+
+.chose-plan{
+    padding-top: 120px;
+    padding-bottom: 250px;
+    background: #F8FBFE;
+}
+
+.chose-plan-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.plan__description-text{
+    text-align: center;
+    color:#323232;
+}
+
+.price{
+    width:100%;
+    padding-bottom: 85px;
+}
+
+.price-content{
+    display: flex;
+    flex-direction: column;
+    width:75%;
+    margin: 0 auto;
+    margin-top: -190px;
+}
+
+.price-type{
+    align-self: center;
+    display: flex;
+    width:250px;
+    height: 46px;
+    border: 1px solid #E8E8EA;
+    box-sizing: border-box;
+    border-radius: 23px;
+    justify-content: center;
+    padding:4px;
+}
+
+.hor-line{
+
+}
+
+.button__price-type{
+    width:125px;
+    height: 36px;
+    border-radius: 23px;
+    cursor: pointer;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    color:#0F3D33;
+}
+
+.yearly{
+    background-color: #50E3C2;
+}
+
+.card-list{
+    margin-top:45px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-list__item{
+    width:350px;
+    box-shadow: 0px 42px 54px rgba(0, 0, 0, 0.0939481);
+    border-radius: 6px;
+    background-color: #ffff;
+}
+
+.card-container{
+    margin:28px 45px;
+    letter-spacing: -0.45px; 
+}
+
+.card__type_name{
+    font-weight: 700;
+    color: #878B90;
+    font-size: 13px;
+    line-height: 23px;
+    margin-bottom:17px;
+}
+
+.card__price{
+    font-weight: 700;
+    color:#000000;
+}
+
+.card__price__currency{
+    font-size: 30px;
+}
+
+.card__price__actual{
+    font-size: 46px;
+}
+
+.card__price__time{
+    font-size: 17px;
+}
+
+.card-list__description{
+    font-size: 14px;
+    line-height: 23px;
+    color: #323232;
+    margin-bottom:26px;
+}
+
+.card__list_features{
+    font-size: 18px;
+    line-height: 32px; 
+    list-style-image: url("../img/Path.png");
+    padding-left: 25px;
+}
+
+.item__feature{
+    margin-bottom: 7px;
+}
+
+.item__feature:last-child{
+    margin-bottom: 31px;
+}
+
+.item__feature_strike{ 
+    text-decoration: line-through;
+    color: #8E8E8E;
+}
+
+.price-content__button{
+    margin-bottom:14px;
+}
+
+.price__credit-card{
+    text-align: left;
+    margin-bottom: 0px;
+    color: #666666;
+}
+
+.our-customer-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.customer__description{
+    font-size: 16px;
+    color:#878B90;
+    margin-bottom: 40px;
+}
+
+.customer__list{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width:100%;
 }
