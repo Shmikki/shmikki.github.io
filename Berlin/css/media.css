@@ -1,17 +1,21 @@
 @media(min-width: 600px) and (max-width:1140px){
-    .header-content{
-        width: 100%;
-        font-size: 20px;
-        margin-bottom: 50px;
-    }
 
-    .header-content__slogan{
+    .title{
         font-size: 25px;
+        line-height: 25px;
+        text-align: center;
     }
 
     .quality-list{
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+    }
+
+    .quality-cart{
+        flex-basis: 200px;
+    }
+
+    .quality-list :first-child .quality__title{
+        padding: 12.5px 0;
     }
 
     .ver-line{
@@ -24,14 +28,18 @@
     }
 
     .manage{
-        margin-top:50px;
+        width: 436px;
         display: flex;
         flex-direction: column;
-        align-content: center;
+    }
+
+    .description-text{
+        text-align: center;
     }
 
     .statistics__images{
         margin-right: 30%;
+        margin-bottom: 50px;
     }
 
     .manage__title{
@@ -39,6 +47,25 @@
     }
 
     .manage__button{
-        margin:0 auto;
+        margin: 0 auto;
+    }
+
+    .activity-content{
+        flex-direction: column;
+    }
+
+    .activity__images{
+        margin-bottom: 150px;
+    }
+
+    .build{
+        flex-direction: column;
+        margin-right: 0;
+        justify-content: center;
+        display: flex;
+    }
+    .price-content{
+        width: 100%;
+
     }
 }

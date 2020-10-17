@@ -16,9 +16,9 @@ body{
 }
 
 .container{
+    margin:0 auto;
     width: 75%;
     height: 100%;
-    margin:0 auto;
 }
 
 .header{
@@ -360,7 +360,7 @@ align-items: center;
 .price-content{
     display: flex;
     flex-direction: column;
-    width:75%;
+    width:60%;
     margin: 0 auto;
     margin-top: -190px;
 }
@@ -375,10 +375,6 @@ align-items: center;
     border-radius: 23px;
     justify-content: center;
     padding:4px;
-}
-
-.hor-line{
-
 }
 
 .button__price-type{
@@ -416,6 +412,17 @@ align-items: center;
 .card-container{
     margin:28px 45px;
     letter-spacing: -0.45px; 
+}
+
+.hor-line{
+    background: #50E3C2;
+    border-radius: 6px;
+    width:100%;
+    height: 1px;
+}
+
+.basic .hor-line{
+    display: none;
 }
 
 .card__type_name{
@@ -488,7 +495,6 @@ align-items: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 70%;
 }
 
 .customer__description{
