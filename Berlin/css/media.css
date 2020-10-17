@@ -1,8 +1,18 @@
+@media(max-width: 1350px) and (min-width: 1141px){
+    .header-content{
+        width: 65%;
+    }
+}
+
 @media(min-width: 600px) and (max-width:1140px){
+
+    .header-content{
+        width:80%;
+    }
 
     .title{
         font-size: 25px;
-        line-height: 25px;
+        line-height: 35px;
         text-align: center;
     }
 
