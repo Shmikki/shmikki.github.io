@@ -2,6 +2,10 @@
     .header-content{
         width: 65%;
     }
+
+    .price-content{
+        width:75%;
+    }
 }
 
 @media(min-width: 600px) and (max-width:1140px){
