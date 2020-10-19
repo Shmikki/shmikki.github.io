@@ -1,4 +1,4 @@
-@media(max-width: 1350px) and (min-width: 1141px){
+@media all and (max-width: 1350px) and (min-width: 1141px){
     .header-content{
         width: 65%;
     }
@@ -8,7 +8,7 @@
     }
 }
 
-@media(min-width: 600px) and (max-width:1140px){
+@media all and (min-width: 600px) and (max-width:1140px){
 
     .header-content{
         width:80%;
@@ -21,11 +21,16 @@
     }
 
     .quality-list{
-        flex-direction: row;
+        flex-flow: column wrap;
+        align-items: center;
     }
 
     .quality-cart{
-        flex-basis: 200px;
+        margin-top: 50px;
+    }
+
+    .quality-cart:first-child{
+        margin: 0;
     }
 
     .quality-list :first-child .quality__title{
@@ -78,7 +83,23 @@
         justify-content: center;
         display: flex;
     }
+
     .price-content{
         width: 100%;
+    }
+
+    .chose-plan-content{
+        width:100%;
+    }
+
+    .card-list{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .customer__list{
+        flex-flow: row wrap;
+        justify-content: space-between;
     }
 }
