@@ -5,6 +5,10 @@ body{
     font-family: 'Inter', sans-serif;
 }
 
+a{
+    text-decoration: none;
+}
+
 .top-content{
     display: flex;
     background-image: url("../img/roomBG.png"),linear-gradient(315.06deg, #152649 5%, #4F525C 100%);
@@ -496,6 +500,7 @@ align-items: center;
 
 .our-customer{
     width: 100%;
+    margin-bottom: 120px;
 }
 
 .our-customer-content{
@@ -515,4 +520,244 @@ align-items: center;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
+}
+
+.requirements{
+    margin-bottom: 100px;
+}
+
+.requirements__list{
+    border: 1px solid #E8E8EA;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+}
+
+.requirements__list-item{
+    display: flex;
+    padding: 20px 55px 48px 46px;
+    border-right: 1px solid #E8E8EA;
+    flex: 1;
+    flex-direction: column;
+}
+
+.requirements__list-item:last-child{
+    border-right: none;
+}
+
+.item__mark{
+    letter-spacing: -0.1px;
+    color: #DBE4F1;
+    font-size: 98px;
+    line-height: 119px;
+}
+
+.requirements-text{
+   line-height: 32px; 
+   padding-bottom: 40px;
+   height: 160px;
+}
+
+.requirements__user{
+    display: flex;
+    align-items: center;
+}
+
+.user__avatar{
+    margin-right: 21px;
+}
+
+.user__info{
+    display: flex;
+    flex-direction: column;
+}
+
+.user__name{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 28px;
+    color: #323232;
+}
+
+.user__from{
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: -0.3px;
+    color: #323232;
+}
+
+.one-place{
+    margin-bottom: 287px;
+}
+
+.one-place-content{
+    display: flex;
+    justify-content: center;
+}
+
+.one-place__title{
+    font-size: 28px;
+    margin-right: 61px;
+}
+
+.registration-form{
+    background: #F8FBFE;
+    padding-bottom: 120px;
+}
+
+.registration-form-content{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.registration-form__title{
+    margin-top: -167px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-list{
+    background: #ffff;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #E8E8EA;
+    box-sizing: border-box;
+    box-shadow: 0px 22px 54px rgba(67, 87, 138, 0.29);
+    border-radius: 10px;
+    width: 558px;
+    padding: 50px;
+    margin: 0 auto;
+    color: #323232;
+    letter-spacing: -0.3px;
+    font-size: 14px;
+}
+
+.form-list__input-item{
+    margin-bottom: 20px;
+    border: 1px solid #E8E8EA;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 15px 16px 14px 15px;
+}
+
+
+.attach{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+.form-text{
+    display: inline-block;
+}
+
+.button__attach_content{
+    position: relative;
+}
+
+.attached__text{
+    width: 130px;
+    background: #F2F5F8;
+    border-radius: 3px;
+    padding: 12px 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.attached__icon{
+    margin-right: 8px;
+}
+
+.attach-button{
+    position: absolute;
+    width: 130px;
+    padding: 12px 10px;
+    top:0;
+    opacity: 0;
+}
+
+.form-list__button{
+    background: rgba(80, 227, 194, 0.14);
+    font-weight: 600;
+    color: #0F3D33;
+    font-size: 16px;
+    line-height: 19px;
+    cursor: pointer;
+    border: none;
+    padding: 15px;
+    border-radius: 3px;
+}
+
+.footer{
+    background: linear-gradient(315.06deg, #152649 5%, #4F525C 100%);
+    color: #F8FBFE;
+    font-size: 16px;
+    line-height: 34px;
+    display: flex;
+    flex-direction: column;
+}
+
+.group__list{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 86px;
+}
+
+.group__list-item{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.group__title{
+    opacity: 0.7;
+    margin-bottom: 23px;
+}
+
+.catalog__item{
+    margin-bottom:23px;
+}
+
+.catalog__item a{
+    color: #F8FBFE;
+}
+
+.bottom-content{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    line-height: 18px;
+    color: #DBE4F1;
+    margin-bottom:43px;
+}
+
+.group{
+    display: flex;
+    flex: 0.8;
+    justify-content: center;
+}
+
+.terms{
+    margin-left: 20px;
+}
+
+.map{
+    margin-left: 20px;
+}
+
+.social{
+    display: flex;
+    flex-direction: row;
+}
+
+.social__img{
+    fill:#fff;
+}
+
+.social__link{
+    margin-left: 20px;
 }

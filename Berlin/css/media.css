@@ -1,17 +1,20 @@
 @media all and (max-width: 1350px) and (min-width: 1141px){
     .header-content{
-        width: 65%;
     }
 
     .price-content{
         width:75%;
     }
+
+    .requirements-text{
+        height: 200px;
+    }
 }
 
+
 @media all and (min-width: 600px) and (max-width:1140px){
-    
     .header-content{
-        width:80%;
+        width:80%;        
     }
 
     .title{
@@ -24,25 +27,8 @@
         padding: 50px 0;
     }
 
-    .quality-list{
-        flex-flow: column wrap;
-        align-items: center;
-    }
-
-    .quality-cart{
-        margin-top: 50px;
-    }
-
-    .quality-cart:first-child{
-        margin: 0;
-    }
-
-    .quality-list :first-child .quality__title{
+    .quality-cart:first-child .quality__title{
         padding: 12.5px 0;
-    }
-
-    .ver-line{
-        display: none;
     }
 
     .our-statistics{
@@ -51,13 +37,23 @@
 
     .statistics-content{
         flex-direction: column;
-        align-items: center;
     }
 
     .manage{
-        width: 436px;
         display: flex;
         flex-direction: column;
+        align-items: center;
+    }
+
+    .activity-content{
+        flex-direction: column;
+    }
+
+    .build{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
     }
 
     .description-text{
@@ -73,27 +69,12 @@
         text-align: center;
     }
 
-    .manage__button{
-        margin: 0 auto;
-    }
-
     .activity{
         padding: 40px 0;
     }
 
-    .activity-content{
-        flex-direction: column;
-    }
-
     .activity__images{
         margin-bottom: 150px;
-    }
-
-    .build{
-        flex-direction: column;
-        margin-right: 0;
-        justify-content: center;
-        display: flex;
     }
     
     .chose-plan{
@@ -111,24 +92,210 @@
     .chose-plan-content{
         width:100%;
     }
-
-    .card-list{
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
+    
+    .our-customer{
+        margin-bottom: 75px;
     }
 
     .customer__description{
-        font-size: 25px;
-        text-align: center;
+        font-size: 18px;
     }
 
     .customer__list{
         flex-flow: row wrap;
-        justify-content: space-between;
+        align-content: center;
+        width: 80%;
     }
 
     .customer__list_item{
+        margin: 20px 30px 0 30px;
+        flex:1;
+    }
+
+    .build{
+        width:100%;
+    }
+
+    .requirements{
+        margin-bottom: 50px;
+    }
+
+    .requirements__list{
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .requirements__list-item{
+        border-right: none;
+        border-bottom: 1px solid #E8E8EA;
+    }
+
+    .requirements-text{
+        height: 90px;
+    }
+
+    .item__mark{
+        font-size: 80px;
+        line-height: 70px;
+    }
+
+    .one-place{
+        margin-bottom: 220px;
+    }
+
+    .one-place-content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .one-place__title{
+        margin: 0 0 20px 0;
+    }
+
+    .form-list{
+        padding:34px;
+        width:100%;
+    }
+
+    .group{
+        flex: 1;
+    }
+}
+
+@media all and (max-width: 906px){
+    .ver-line{
+        display: none;
+    }
+
+    .quality-list{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .quality-cart{
+        margin-bottom: 40px;
+    }
+
+    .card-list{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-container{
+        margin: 18px 20px;
+        letter-spacing: -0.45px;
+    }
+
+    .registration-form{
+        padding-bottom: 60px;
+    }
+
+    .group__list{
+        margin: 40px 0;
+    }
+    
+
+    .requirements__list-item{
+        padding: 10px 24px 15px 28px;
+    }
+
+    .requirements-text{
+        height: 100px;
+    }
+
+    .group__list-item{
+        flex: 0;
+    }
+    
+    .buttom-content{
+        align-items: center;
+    }
+
+    .copy-right{
+        flex:0.4;
+    }
+
+    .group{
+        flex: 0.4;
+        order: -1;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social{
+        flex-direction: column;
+    }
+
+    .social__link{
+        margin-bottom: 8px;
+        margin-left: 0;
+    }
+
+    .privacy{
+        margin-bottom: 5px;
+    }
+
+    .terms{
+        margin-left:0;
+        margin-bottom:5px;
+    }
+
+    .map{
+        margin-left:0;
+        margin-bottom:5px;
+    }
+}
+
+@media all and (max-width:690px){
+
+    .menu__navbar{
+        flex-direction: column;
+        margin-top: -20px;
+        align-items: center;
+    }
+
+    .nav-item{
         margin-top: 15px;
+        margin-right: 0;
+    }
+
+    .activity__images{
+        margin-right: 20%;
+    }
+
+    .item__mark{
+        line-height: 30px;
+        margin-top:20px;
+    }
+
+    .customer__list_item{
+        display: flex;
+        margin: 10px auto;
+        flex: 0.6;
+    }
+
+
+    .customer__description{
+        font-size: 16px;
+    }
+
+    .requirements__list-item:first-child .requirements-text{
+        margin-bottom: 30px;
+    }
+
+    .our-customer {
+        margin-bottom: 50px;
+    }
+
+    .form-list{
+        padding: 16px;
+    }
+
+    .customer__list{
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        width:70%;
     }
 }
