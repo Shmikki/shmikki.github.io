@@ -12,7 +12,7 @@
 }
 
 
-@media all and (min-width: 600px) and (max-width:1140px){
+@media all and (min-width: 400px) and (max-width:1140px){
     .header-content{
         width:80%;        
     }
@@ -181,6 +181,14 @@
         flex-direction: column;
         align-items: center;
     }
+    
+    .price-content__button{
+        text-align: center;
+    }
+
+    .credit-card{
+        text-align: center;
+    }
 
     .card-container{
         margin: 18px 20px;
@@ -208,60 +216,58 @@
         flex: 0;
     }
     
-    .buttom-content{
+    .bottom-content{
         align-items: center;
-    }
-
-    .copy-right{
-        flex:0.4;
+        flex-wrap: wrap;
+        margin: 0 auto 20px auto;
     }
 
     .group{
-        flex: 0.4;
+        display: flex;
+        flex: 100%;
         order: -1;
-        flex-direction: column;
-        align-items: center;
+        margin-bottom: 20px;
+        justify-content: space-between;
     }
 
-    .social{
-        flex-direction: column;
-    }
-
-    .social__link{
-        margin-bottom: 8px;
-        margin-left: 0;
-    }
-
-    .privacy{
-        margin-bottom: 5px;
-    }
-
-    .terms{
-        margin-left:0;
-        margin-bottom:5px;
-    }
-
-    .map{
-        margin-left:0;
-        margin-bottom:5px;
-    }
 }
 
 @media all and (max-width:690px){
 
-    .menu__navbar{
+    .header{
         flex-direction: column;
-        margin-top: -20px;
         align-items: center;
+        margin-bottom: 50px;
+    }
+ 
+    .menu__navbar{
+        flex: 1;
+        margin-top: 20px;
+        justify-content: space-around;
     }
 
     .nav-item{
-        margin-top: 15px;
-        margin-right: 0;
+        margin-right: 40px;
     }
 
     .activity__images{
         margin-right: 20%;
+    }
+
+    .customer__description{
+        font-size: 14px;
+    }
+
+    .statistics__images{
+        margin-right: 50%;
+    }
+    
+    .activity__images{
+        margin: 0 auto 150px auto;
+    }
+
+    .power{
+        display: none;
     }
 
     .item__mark{
@@ -274,7 +280,6 @@
         margin: 10px auto;
         flex: 0.6;
     }
-
 
     .customer__description{
         font-size: 16px;
@@ -297,5 +302,12 @@
         align-items: center;
         justify-content: center;
         width:70%;
+    }
+
+}
+
+@media all and (max-width: 570px){
+    .requirements-text {
+        height: 150px;
     }
 }
