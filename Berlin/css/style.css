@@ -21,8 +21,9 @@ a{
 
 .container{
     margin:0 auto;
-    width: 75%;
+    max-width: 1200px;
     height: 100%;
+    width: 75%;
 }
 
 .header{
@@ -63,7 +64,7 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width:50%;
+    width: 55%;
     margin:0 auto;
 }
 
@@ -656,6 +657,7 @@ align-items: center;
 
 .button__attach_content{
     position: relative;
+    cursor: pointer;
 }
 
 .attached__text{
@@ -665,6 +667,7 @@ align-items: center;
     padding: 12px 10px;
     font-size: 14px;
     text-align: center;
+    cursor: pointer;
 }
 
 .attached__icon{
@@ -677,6 +680,7 @@ align-items: center;
     padding: 12px 10px;
     top:0;
     opacity: 0;
+    cursor: pointer;
 }
 
 .form-list__button{

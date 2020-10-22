@@ -12,7 +12,7 @@
 }
 
 
-@media all and (min-width: 400px) and (max-width:1140px){
+@media all and (min-width: 375px) and (max-width:1140px){
     .header-content{
         width:80%;        
     }
@@ -309,5 +309,14 @@
 @media all and (max-width: 570px){
     .requirements-text {
         height: 150px;
+    }
+
+    .statistics__images{
+        margin: 0 auto 50px auto;
+        margin-bottom: 50px;
+    }
+
+    .analitycs{
+        left : -27px;
     }
 }
