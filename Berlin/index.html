@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Berlin</title>
@@ -7,6 +7,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/media.css">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
     <div class="top-content">
@@ -38,7 +55,7 @@
                         convert more visitors than any website.
                 </div>
                 <div class="header-content__button button_start">
-                        <a href="#" class="button-link"><p>Start free 14 days trial</p></a>
+                        <a href="#registration__form" class="button-link"><p>Start free 14 days trial</p></a>
                 </div>
                 <div class="credit-card">No credit card required</div>
             </div>
@@ -112,7 +129,7 @@
                         </p>
                     </div>
                     <div class="manage__button button_start">
-                        <a href="#" class="button-link button-link_background"><p>Start free 14 days trial</p></a>
+                        <a href="#registration__form" class="button-link button-link_background"><p>Start free 14 days trial</p></a>
                     </div>
                 </div>
             </div>
@@ -137,7 +154,7 @@
                         </p>
                     </div>
                     <div class="build__button button_start">
-                        <a href="#" class="button-link button-link_background"><p>Start free 14 days trial</p></a>
+                        <a href="#registration__form" class="button-link button-link_background"><p>Start free 14 days trial</p></a>
                     </div>
                 </div>
             </div>
@@ -160,7 +177,7 @@
                     </p>
                 </div>
             </div>
-            <video class="video" controls="controls">
+            <video class="video" controls="controls" poster="img/roomVideoBG.png">
                 <source src="video/movie.ogv" type='video/ogg; codecs="theora, vorbis"'>
                 <source src="video/movie.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
                </video>
@@ -212,7 +229,7 @@
                                 <li class="item__feature item__feature_strike">Unlimited Emails</li>
                             </ul>
                             <div class="price-content__button button_start">
-                                <a href="#" class="button-link"><p>Start free 14 days trial</p></a>
+                                <a href="#registration__form" class="button-link"><p>Start free 14 days trial</p></a>
                             </div>
                             <div class="credit-card price__credit-card">No credit card required</div>
                         </div>
@@ -239,7 +256,7 @@
                             <li class="item__feature">Unlimited Emails</li>
                         </ul>
                         <div class="price-content__button button_start">
-                            <a href="#" class="button-link"><p>Start free 14 days trial</p></a>
+                            <a href="#registration__form" class="button-link"><p>Start free 14 days trial</p></a>
                        </div>
                         <div class="credit-card price__credit-card">No credit card required</div>
                     </div>
@@ -320,14 +337,14 @@
             <div class="one-place-content">
                 <div class="one-place__title title">Manage your team in one place</div>
                 <div class="one-place__button button_start">
-                    <a href="#" class="button-link"><p>Start free 14 days trial</p></a>
+                    <a href="#registration__form" class="button-link"><p>Start free 14 days trial</p></a>
                 </div>
             </div>
         </div>
     </div>
     <div class="registration-form">
         <div class="container">
-            <div class="registration-form-content">
+            <div class="registration-form-content" id="registration__form">
                 <div class="registration-form__title title">Please leave your request</div>
                 <form action="" class="form-list">
                     <input type="text" class="form-list__input-item" placeholder="First name" required>
@@ -341,10 +358,10 @@
                                  <img src="img/icon.svg" alt="icon" class="attached__icon">
                                  Attach image
                             </div>
-                            <input class="attach-button" type="file"></input>
+                            <input class="attach-button" type="file">
                         </div>
                     </div>
-                    <input type="submit" class="form-list__button" value="Send"></input>
+                    <input type="submit" class="form-list__button" value="Send">
                 </form>
             </div>
         </div>
@@ -392,9 +409,9 @@
                     <div class="map">Terms & Conditions</div>
                 </div>
                 <div class="social">
-                    <a href="#" class="social__link twitter"><img class="social__img" src="img/twitter.svg" alt="twitter"></a>
-                    <a href="#" class="social__link fb"><img class="social__img" src="img/fb.svg" alt="fb"></a>
-                    <a href="#" class="social__link google"><img class="social__img" src="img/google.svg" alt="google"></a>
+                    <a href="#" class="social__link twitter"><img class="social__img" src="img/twitter.png" alt="twitter"></a>
+                    <a href="#" class="social__link fb"><img class="social__img" src="img/fb.png" alt="fb"></a>
+                    <a href="#" class="social__link google"><img class="social__img" src="img/google.png" alt="google"></a>
                 </div>
             </div>
         </div>
