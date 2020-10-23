@@ -3,6 +3,7 @@ body{
     margin:0 auto;
     padding: 0;
     font-family: 'Inter', sans-serif;
+    min-width: 325px;
 }
 
 a{
@@ -12,14 +13,14 @@ a{
 .top-content{
     position: relative;
     display: flex;
-    background-image: url("../img/roomBG.png"),linear-gradient(315.06deg, #152649 5%, #4F525C 100%);
+    background-image: url("../img/roomBG.png");
     color:#DBE4F1;
     background-repeat: no-repeat;
     background-position:center center;
     background-size: cover;
     width:100%;
     height: 100vh;
-    min-height: 100vh;
+    min-height: 500px;
 }
 
 .top-content:after{
