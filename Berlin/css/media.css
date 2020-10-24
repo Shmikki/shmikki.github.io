@@ -1,9 +1,4 @@
-@media all and (max-width: 1350px) and (min-width: 1141px){
-
-    .price-content{
-        width:75%;
-    }
-
+@media all and (max-width: 1590px) and (min-width: 1141px){
     .requirements-text{
         height: 200px;
     }
@@ -83,10 +78,6 @@
         padding-bottom: 50px;
     }
 
-    .price-content{
-        width: 100%;
-    }
-
     .chose-plan-content{
         width:100%;
     }
@@ -102,6 +93,7 @@
     .customer__list{
         flex-flow: row wrap;
         align-content: center;
+
     }
 
     .customer__list_item{
@@ -187,6 +179,10 @@
         text-align: center;
     }
 
+    .basic{
+        margin-right: 0;
+    }
+
     .card-container{
         margin: 18px 20px;
         letter-spacing: -0.45px;
@@ -263,6 +259,10 @@
         margin: 0 auto 150px auto;
     }
 
+    .activity__img{
+        margin-right: 0;
+    }
+
     .power{
         display: none;
     }
@@ -313,6 +313,7 @@
 @media all and (max-width: 570px){
     .requirements-text {
         height: 150px;
+        text-align: justify;
     }
 
     .statistics__images{
