@@ -202,12 +202,12 @@
         <div class="container">
             <div class="price-content">
                 <div class="price-type">
-                    <div class="button__price-type montly">MONTLY</div>
-                    <div class="button__price-type yearly">YARLY</div>
+                    <div data-time="montly" class="button__price-type">MONTLY</div>
+                    <div data-time="yearly" class="button__price-type button_active">YARLY</div>
                 </div>
                 <div class="card-list">
-                    <div class="card-list__item basic">
-                        <div class="hor-line"></div>
+                    <div class="card-list__item montly">
+                     <div class="hor-line"></div>
                         <div class="card-container">
                             <div class="card__type_name">BASIC</div>
                             <div class="card__price">
@@ -233,7 +233,7 @@
                             <div class="credit-card price__credit-card">No credit card required</div>
                         </div>
                     </div>
-                <div class="card-list__item pro">
+                <div class="card-list__item yearly active">
                     <div class="hor-line"></div>
                     <div class="card-container">
                         <div class="card__type_name">PRO</div>
@@ -417,3 +417,4 @@
     </footer>
 </body>
 </html>
+<script src="js/main.js"></script>
