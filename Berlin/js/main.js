@@ -2,25 +2,10 @@ const headerLocal = document.querySelector(".header"),
 videoButtonPlay = document.querySelector('.button-video'),
 helpSucsessContent = document.querySelector('.helpSuccessful-content'),
 video = document.querySelector('.video'),
-priceType = document.querySelector('.price-type'),
-selectedPlan = {
-    button : document.querySelector('.button_active'),
-    card : document.querySelector('.yearly'),
-    switchButton: function(event){
-        this.button = event.target;
-    },
-    switchCard: function(){
-        this.card = document.querySelector(`.${this.button.getAttribute('data-time')}`);
-    },
-    remove:function(){
-        this.button.classList.remove('button_active');
-        this.card.classList.remove('active');
-    },
-    add:function(){
-        this.button.classList.add('button_active');
-        this.card.classList.add('active');
-    }
-};
+priceType = document.querySelector('.price-type');
+
+let selectedButton = document.querySelector('.button_active'),
+selectedCard = document.querySelector('.yearly');
 
 window.addEventListener('scroll', () => {
     let =  maxHeaderHeight = document.querySelector('.top-content').offsetHeight - headerLocal.offsetHeight;
@@ -40,10 +25,12 @@ priceType.addEventListener('click',(event) => {
 });
 
 function switchActive(event){
-    if(selectedPlan.button != event.target){
-        selectedPlan.remove();
-        selectedPlan.switchButton(event);
-        selectedPlan.switchCard();
-        selectedPlan.add();
+    if(selectedButton != event.target){
+        selectedButton.classList.remove('button_active');
+        selectedCard.classList.remove('active');
+        selectedButton = event.target;
+        selectedCard = document.querySelector(`.${selectedButton.getAttribute('data-time')}`);
+        selectedButton.classList.add('button_active');
+        selectedCard.classList.add('active');
     }
 }
