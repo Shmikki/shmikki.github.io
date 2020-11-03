@@ -25,7 +25,7 @@ priceType.addEventListener('click',(event) => {
 });
 
 function switchActive(event){
-    if(selectedButton != event.target){
+    if(selectedButton !== event.target){
         selectedButton.classList.remove('button_active');
         selectedCard.classList.remove('active');
         selectedButton = event.target;
