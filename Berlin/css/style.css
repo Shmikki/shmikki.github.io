@@ -711,6 +711,11 @@ align-items: center;
     top:0;
     opacity: 0;
     cursor: pointer;
+    z-index:100;
+}
+
+.attach-button #file-upload-button{
+    cursor: pointer;
 }
 
 .form-list__button{

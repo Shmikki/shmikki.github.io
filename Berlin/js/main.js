@@ -21,14 +21,20 @@ function videoPlay(){
 videoButtonPlay.addEventListener('click',videoPlay);
 
 priceType.addEventListener('click',(event) => {
-    switchActive(event);
+    let target = event.target;
+
+    if(!target.classList.contains('button__price-type')){
+        return;
+    }
+
+    switchActive(target);
 });
 
-function switchActive(event){
-    if(selectedButton !== event.target){
+function switchActive(target){
+    if(selectedButton !== target){
         selectedButton.classList.remove('button_active');
         selectedCard.classList.remove('active');
-        selectedButton = event.target;
+        selectedButton = target;
         selectedCard = document.querySelector(`.${selectedButton.getAttribute('data-time')}`);
         selectedButton.classList.add('button_active');
         selectedCard.classList.add('active');
