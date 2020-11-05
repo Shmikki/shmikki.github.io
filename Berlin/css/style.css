@@ -12,11 +12,8 @@ a{
 .top-content{
     position: relative;
     display: flex;
-    background-image: url("../img/roomBG.png");
+    background: linear-gradient(315deg, rgba(21,38,73,0.7) 5%, rgba(79,82,92,0.7) 100%);
     color:#DBE4F1;
-    background-repeat: no-repeat;
-    background-position:center center;
-    background-size: cover;
     width: 100%;
     height: 100vh;
     min-height: 500px;
@@ -31,11 +28,15 @@ a{
     left: 0;
     position: absolute;
     bottom: 0;
-    background: linear-gradient(315deg, rgba(21,38,73,0.3) 5%, rgba(79,82,92,0.3) 100%);
+    z-index: -1;
+    background-image: url("../img/roomBG.png");
     width: 100%;
     height: 100vh;
-    z-index: 1;
     pointer-events: none;
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-size: cover;
+    min-height: 500px;
 }
 
 .container{
@@ -107,10 +108,12 @@ a{
 
 
 .header-content__subtitle{
+    max-width: 563px;
     line-height: 34px;
     font-size: 20px;
     text-align: center;
     margin-bottom: 25px;  
+    color:#DBE4F1;
 }
 
 .header-content__button{
@@ -126,12 +129,14 @@ a{
     text-decoration: none;
     color: #0F3D33;
     text-align: center;
+    font-weight: 600;
 }
 
 .credit-card{
     font-size: 14px;
     line-height: 28px; 
     text-align: center;
+    color:#DBE4F1;
 }
 
 .our-quality{
@@ -145,11 +150,10 @@ a{
 }
 
 .quality-cart{
-    width:307px;
+    max-width:307px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 1;
 }
 
 .circles{
@@ -190,6 +194,7 @@ a{
 .description-text{
     font-size: 18px;
     line-height: 34px;
+    color:#323232;
 }
 
 .quality__description-text{
@@ -252,6 +257,10 @@ a{
     z-index: 500;
 }
 
+.manage{
+    max-width: 436px;
+}
+
 .manage__description{
     font-size: 18px;
     color:#323232;
@@ -278,7 +287,7 @@ a{
 
 .build{
 align-items: center;
-    width: 436px;
+    max-width: 436px;
     margin-right: 85px;
 }
 
@@ -299,8 +308,9 @@ align-items: center;
 
 .helpSuccessful{
     position: relative;
-    padding-bottom: 100px;
-    height: 70vh;
+    height: 50vh;
+    max-height: 1145px;
+    min-height: 500px;
 }
 
 .helpSuccessful:after{
@@ -329,7 +339,6 @@ align-items: center;
 }
 
 .button-video{
-    margin-top: 120px;
     position: relative;
     margin-bottom: 54px;
     cursor: pointer;
@@ -354,6 +363,7 @@ align-items: center;
 
 .helpSuccessful__description-text{
     text-align: center;
+    color:#ffff;
 }
 
 .video{
@@ -363,6 +373,7 @@ align-items: center;
     top:0;
     right: 0;
     object-fit: cover;
+    object-position: 50% 80%;
 }
 
 .chose-plan{
@@ -442,7 +453,6 @@ align-items: center;
 
 .card-list__item{
     flex: 0.3;
-    box-shadow: 0px 42px 54px rgba(0, 0, 0, 0.0939481);
     border-radius: 6px;
     background-color: #ffff;
 }
@@ -456,7 +466,7 @@ align-items: center;
 .hor-line{
     border-radius: 6px;
     width: 100%;
-    height: 1px;
+    height: 4px;
 }
 
 .montly{
@@ -586,6 +596,7 @@ align-items: center;
    line-height: 32px; 
    padding-bottom: 40px;
    height: 160px;
+   color:#000000;
 }
 
 .requirements__user{
@@ -683,6 +694,7 @@ align-items: center;
 
 .form-text{
     display: inline-block;
+    color: #323232;
 }
 
 .button__attach_content{
