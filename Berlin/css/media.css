@@ -5,10 +5,16 @@
 }
 
 
+@media all and (max-width: 1380px){
+    .header{
+        padding:20px;
+    }
+}
+
 @media all and (min-width: 319px) and (max-width:1140px){
     .header-content{
         width:80%;        
-    }
+    }   
 
     .title{
         font-size: 25px;

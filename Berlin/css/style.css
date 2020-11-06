@@ -811,3 +811,21 @@ align-items: center;
 .social__link{
     margin-left: 20px;
 }
+
+.currency__list{
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.currency__card{
+    border: 1px solid #DBE4F1;
+    text-align: center;
+    flex:1;
+}
+
+.currency__name{
+    border-bottom: 1px solid;
+}

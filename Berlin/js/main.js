@@ -45,10 +45,11 @@ const buttonStart =  document.querySelectorAll('.button-link');
 for(let link of buttonStart){
     link.addEventListener('click',(event) => {
         event.preventDefault();
-        let id = link.getAttribute('href'),
-        top = document.querySelector(id).getBoundingClientRect().top + document.body.scrollTop + 'px',
-        body = document.querySelector('body');
-        console.log(body);
-        body.animate({scrollTop : top} , 1500);
+        const blockId = link.getAttribute('href');
+        
+        document.querySelector(blockId).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
     });
 }
