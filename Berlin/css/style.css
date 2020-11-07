@@ -314,6 +314,9 @@ align-items: center;
 }
 
 .helpSuccessful:after{
+    height: 50vh;
+    max-height: 1145px;
+    min-height: 500px;
     content:'';
     position: absolute;
     top: 0;
@@ -367,8 +370,10 @@ align-items: center;
 }
 
 video::-webkit-media-controls-overlay-play-button{
-    display: none;
+    display: none !important;
+    -webkit-appearance: none;
 }
+
 
 .video{
     position: absolute;
