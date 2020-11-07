@@ -366,6 +366,10 @@ align-items: center;
     color:#ffff;
 }
 
+video::-webkit-media-controls-overlay-play-button{
+    display: none;
+}
+
 .video{
     position: absolute;
     width:100%;
