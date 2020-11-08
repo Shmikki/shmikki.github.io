@@ -16,6 +16,7 @@ function videoPlay(){
         helpSucsessContent.style.display = 'none';
         video.style.zIndex = 10000;
         video.play();
+        video.setAttribute('controls','controls')
 }
 
 videoButtonPlay.addEventListener('click',videoPlay);
