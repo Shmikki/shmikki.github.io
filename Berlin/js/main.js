@@ -27,7 +27,6 @@ priceType.addEventListener('click',(event) => {
     if(!target.classList.contains('button__price-type')){
         return;
     }
-
     switchActive(target);
 });
 
