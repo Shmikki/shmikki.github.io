@@ -1,0 +1,21 @@
+.User{
+    display: flex;
+    width: 100%;
+    margin-top:10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid gray;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.fl{
+    width: 100%;
+    background: gray;
+    height: 1px;
+}
+
+.UserContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

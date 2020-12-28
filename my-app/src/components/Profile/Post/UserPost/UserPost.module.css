@@ -1,0 +1,16 @@
+.userLink{
+    align-self: flex-start;
+    font-size: 12px;
+}
+
+.user{
+    display: flex;
+    flex-direction: row;
+}
+
+.userAvatar{
+    margin-right: 10px;
+    width:50px;
+    height: 40px;
+}
+
