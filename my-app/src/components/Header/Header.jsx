@@ -9,8 +9,8 @@ import React from "react"
 class Header extends React.Component{
     render(){
         return(
-        <header className={styles.header}>
-            <div className={styles.header__content}>
+        <header className={styles.main}>
+            <div className={styles.content}>
             <div className={styles.logo}>
                 <NavLink  to="/profile"> <img src={Logo} alt="logo" className={styles.logo_image} /> </NavLink>
             </div>

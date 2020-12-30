@@ -11,7 +11,7 @@ class Dialogs extends React.Component {
 
     render() {
         return (
-            <div className={styles.dialogs_content}>
+            <div className={styles.content}>
                 <div className={styles.Users}>
                     {this.props.DialogsPage.users.map(item => <UserInfo AvatarURL={""} name={item.name} surname={item.surname} id={item.id}/>)}
                 </div>

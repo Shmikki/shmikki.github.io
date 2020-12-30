@@ -1,18 +1,19 @@
 import {connect} from "react-redux";
 import Users from "./Users";
-import {changeFollowActionCreator} from "../../redux/usersReducer";
+import {changeFollowActionCreator, setUsersActionCreator} from "../../redux/usersReducer";
 
 
-const mapStateToProps = state =>{
+const mapStateToProps = state => {
     return{
-        usersPage: state.usersPage
+        usersPage:  state.usersPage
     }
 };
 
 const mapDispatchToProps = (dispatch) => {
     return(
         {
-            changeFollow :(id) => dispatch(changeFollowActionCreator(id))
+            changeFollow : (id) => dispatch(changeFollowActionCreator(id)),
+            setUsers : (users) => dispatch(setUsersActionCreator(users))
         }
     )
 }

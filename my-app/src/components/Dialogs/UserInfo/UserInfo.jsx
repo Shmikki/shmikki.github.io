@@ -9,9 +9,9 @@ class UserInfo extends React.Component {
 
     render() {
         return (
-            <div className={styles.userInfo}>
+            <div className={styles.content}>
                 <Avatar src={this.props.AvatarURL} alt={this.props.name}/>
-                <div className={styles.UserName}>
+                <div className={styles.name}>
                     <NavLink to={`/dialogs/${this.props.id}`}>
                         {this.props.name} {this.props.surname}
                     </NavLink>

@@ -1,7 +1,7 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
 import styles from "./UserAvatar.module.css";
-
+import userImage from "../../../../assets/images/user-image.png";
 
 class UserAvatar extends React.Component{
 
@@ -9,7 +9,7 @@ class UserAvatar extends React.Component{
         return(
             <div className={styles.UserAvatar}>
                 <NavLink to={`/users/${this.props.id}`}>
-                    <img src={`${this.props.AvatarSrc}`} className={styles.UserAvatar_img}/>
+                    <img src={ this.props.photos.small ? this.props.photos.small : userImage} className={styles.UserAvatar_img}/>
                 </NavLink>
             </div>
         )

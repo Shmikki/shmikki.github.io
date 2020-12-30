@@ -9,32 +9,27 @@ class User extends React.Component{
         this.id = this.props.user.id;
     }
 
-    followed(follow){
-        return (follow ?
-            <button onClick={() => this.onChangeFollow(this.id)}>followed</button>
-            :
-            <button onClick={() => this.onChangeFollow(this.id)}>unfollowed</button>);
-    }
-
     onChangeFollow(id){
         this.props.changeFollow(id);
     }
 
     render(){
         return(
-            <div className={styles.User}>
-                <UserAvatar id={this.props.user.id} AvatarSrc={this.props.user.AvatarSrc}/>
+            <div className={styles.info}>
+                <UserAvatar id={this.props.user.id} photos={this.props.user}/>
                 <div className={styles.UserContent}>
-                    <div className={styles.UserName}>
+                    <div className={styles.name}>
                     <span>
-                        {this.props.user.firstName} {this.props.user.lastName}
+                        {this.props.user.name}
                     </span>
                     </div>
-                    <div className={styles.UserMessage}>
+                    <div className={styles.message}>
                         <span>Write message</span>
                     </div>
-                    {
-                        this.followed(this.props.user.follow)
+                    { this.props.user.followed ?
+                        <button onClick={() => this.onChangeFollow(this.id)}>followed</button>
+                        :
+                        <button onClick={() => this.onChangeFollow(this.id)}>unfollowed</button>
                     }
                 </div>
             </div>

@@ -8,14 +8,14 @@ class Post extends React.Component {
 
     render() {
         return (
-            <div className={styles.post}>
-                <div className={styles.post__content}>
+            <div className={styles.item}>
+                <div className={styles.item__content}>
                     <UserPost src={this.props.src} />
-                    <div className={styles.post__text}>
+                    <div className={styles.item__text}>
                         {this.props.post_text}
                     </div>
                     <div className={styles.fl}></div>
-                    <div className={styles.post__likes}>
+                    <div className={styles.item__likes}>
                         <span> {this.props.likes} likes</span>
                     </div>
                 </div>

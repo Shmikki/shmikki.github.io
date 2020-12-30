@@ -23,7 +23,7 @@ class NewMessage extends React.Component{
 
     render(){
         return(
-            <div className={styles.form__message}>
+            <div className={styles.form}>
                 <textarea name="" id="" ref={this.MyRef} onChange={() => this.onChangeMessage() } value={ this.props.newMessageText }  className={styles.form__area} placeholder="Write message" />
                 <button className={styles.form__sendBtn} onClick={() => this.onSendMessage()}>Send</button>
             </div>

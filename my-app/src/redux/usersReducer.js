@@ -1,5 +1,6 @@
 
 const CHANGE_FOLLOW = "CHANGE_FOLLOW";
+const SET_USERS = "SET_USERS";
 
 export function changeFollowActionCreator(userID){
     return{
@@ -8,13 +9,15 @@ export function changeFollowActionCreator(userID){
     }
 }
 
+export function setUsersActionCreator(users){
+    return{
+        type : SET_USERS,
+        users : users
+    }
+}
 
 const initialState = {
-    users :[
-        {firstName:"Ivan" , lastName: "Ignatyuk", id: 1 , AvatarSrc: "https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png", follow: false},
-        {firstName:"Ivan" , lastName: "Ignatyuk", id: 2 , AvatarSrc: "https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png", follow: false},
-        {firstName:"Ivan" , lastName: "Ignatyuk", id: 3 , AvatarSrc: "https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png", follow: false}
-    ]
+    users :[]
 }
 
 export function usersReducer(state = initialState, action){
@@ -22,10 +25,13 @@ export function usersReducer(state = initialState, action){
     switch (action.type){
         case CHANGE_FOLLOW :
             newState.users.map(user => {
-                if(user.id === action.id) user.follow = !user.follow
-            });
+                if(user.id === action.id) user.followed = !user.followed
+            })
+            return newState;
+        case SET_USERS:
+            newState.users = action.users;
             return newState;
         default:
-            return state
+            return state;
     }
 }

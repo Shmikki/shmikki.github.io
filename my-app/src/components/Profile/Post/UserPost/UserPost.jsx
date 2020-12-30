@@ -8,11 +8,11 @@ class UserPost extends React.Component {
 
     render() {
         return (
-                <div className={styles.user}>
+                <div className={styles.content}>
                     <NavLink to={"/profile"}>
-                    <div className={styles.userAvatar}><img src={this.props.src} alt="ava"/> </div>
+                    <div className={styles.avatar}><img src={this.props.src} alt="ava"/> </div>
                     </NavLink>
-                    <NavLink to={"/profile"} className={styles.userLink}>
+                    <NavLink to={"/profile"} className={styles.link}>
                     <styles className="userName">Ivan Ihnatsiuk</styles>
                     </NavLink>
                 </div>
