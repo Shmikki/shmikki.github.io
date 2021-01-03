@@ -6,12 +6,14 @@ class User extends React.Component{
 
     constructor(props) {
         super(props);
-        this.id = this.props.user.id;
+        this.onChangeFollow = this.onChangeFollow.bind(this);
     }
 
-    onChangeFollow(id){
-        this.props.changeFollow(id);
+    onChangeFollow(){
+        this.props.changeFollow(this.props.user.id);
     }
+
+
 
     render(){
         return(
@@ -27,9 +29,9 @@ class User extends React.Component{
                         <span>Write message</span>
                     </div>
                     { this.props.user.followed ?
-                        <button onClick={() => this.onChangeFollow(this.id)}>followed</button>
+                        <button onClick={() => this.onChangeFollow()}>followed</button>
                         :
-                        <button onClick={() => this.onChangeFollow(this.id)}>unfollowed</button>
+                        <button onClick={() => this.onChangeFollow()}>unfollowed</button>
                     }
                 </div>
             </div>

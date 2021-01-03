@@ -8,7 +8,7 @@ class UserAvatar extends React.Component{
     render(){
         return(
             <div className={styles.UserAvatar}>
-                <NavLink to={`/users/${this.props.id}`}>
+                <NavLink to={`/profile/${this.props.id}`}>
                     <img src={ this.props.photos.small ? this.props.photos.small : userImage} className={styles.UserAvatar_img}/>
                 </NavLink>
             </div>

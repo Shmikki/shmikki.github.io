@@ -7,22 +7,19 @@ import NewPost from "./NewPost/NewPost";
 
 
 
-class Profile extends React.Component{
-
-    render()
-    {
+function Profile(props){
+    
         return (
             <div className={styles.content}>
-                <User name={"Ivan"} birthday={"17.10.1999"} city={"Minsk"} education={"BSU 2021"}/>
+                <User fullName={props.profile.fullName} />
                 <NewPost
-                    newPostText={this.props.profilePage.newPostText}
-                    updatePostText={this.props.updatePostText}
-                    addPost={this.props.addPost}
+                    newPostText={props.newPostText}
+                    updatePostText={props.updatePostText}
+                    addPost={props.addPost}
                 />
-                {this.props.profilePage.posts.map(item => <Post post_text={item.post_text} likes={item.likes} src={item.src} />)}
+                {props.posts.map(item => <Post post_text={item.post_text} likes={item.likes} src={item.src} />)}
             </div>
         );
-    }
 }
 
 export default Profile;

@@ -7,13 +7,10 @@ class User extends React.Component {
         return (
             <div className={styles.profile}>
                 <div className={styles.avatar}>
-                    <img src={this.props.src_avatar} alt="ava"/>
+                    <img src="" alt="ava"/>
                 </div>
                 <div className={styles.info}>
-                    <div className={styles.name}>{this.props.name}</div>
-                    <div className={styles.birthday}>{this.props.birthday}</div>
-                    <div className={styles.city}>{this.props.city}</div>
-                    <div className={styles.education}>{this.props.education}</div>
+                    <div className={styles.name}>{this.props.fullName}</div>
                 </div>
             </div>
         );
