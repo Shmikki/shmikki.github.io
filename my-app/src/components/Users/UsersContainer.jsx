@@ -5,8 +5,8 @@ import {
     setTotalCountUsersActionCreator, changeCurrentPageActionCreator, toggleIsFetchingActionCreator
 } from "../../redux/usersReducer";
 import {Component} from "react";
-import axios from "axios";
 import Users from "./Users";
+import {getUsers} from "../../api/api";
 
 class UsersContainer extends Component{
 
@@ -17,20 +17,20 @@ class UsersContainer extends Component{
 
     componentDidMount() {
         this.props.toggleIsFetching(true);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`)
-            .then(response => {
+        getUsers(1,10)
+            .then(data => {
                 this.props.toggleIsFetching(false);
-                this.props.setUsers(response.data.items);
-                this.props.setCountUsers(response.data.totalCount);
+                this.props.setUsers(data.items);
+                this.props.setCountUsers(data.totalCount);
             });
     }
 
     onChangeCurrentPage(p){
         this.props.toggleIsFetching(true);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${p}`)
-            .then(response => {
+       getUsers(p)
+            .then(data => {
                 this.props.toggleIsFetching(false);
-                this.props.setUsers(response.data.items);
+                this.props.setUsers(data.items);
             });
         this.props.setCurrentPage(p);
     }

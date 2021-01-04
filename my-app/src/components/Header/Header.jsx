@@ -4,10 +4,11 @@ import styles from "./Header.module.css"
 import Search from "./Search/Search";
 import {NavLink} from "react-router-dom";
 import React from "react"
+import Auth from "./Auth/Auth";
 
 
-class Header extends React.Component{
-    render(){
+const Header = (props) => {
+
         return(
         <header className={styles.main}>
             <div className={styles.content}>
@@ -15,10 +16,11 @@ class Header extends React.Component{
                 <NavLink  to="/profile"> <img src={Logo} alt="logo" className={styles.logo_image} /> </NavLink>
             </div>
             <Search />
+            <Auth userID={props.userID}/>
             </div>
         </header>
         );
-    }
+
 }
 
 export default Header;

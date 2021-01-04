@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./User.module.css";
 import UserAvatar from "./UserAvatar/UserAvatar";
+import {setFollow, setUnFollow} from "../../../api/api";
 
 class User extends React.Component{
 
@@ -9,13 +10,14 @@ class User extends React.Component{
         this.onChangeFollow = this.onChangeFollow.bind(this);
     }
 
-    onChangeFollow(){
-        this.props.changeFollow(this.props.user.id);
+    onChangeFollow(id){
+        this.props.changeFollow(id);
     }
 
 
 
     render(){
+        const id = this.props.user.id;
         return(
             <div className={styles.info}>
                 <UserAvatar id={this.props.user.id} photos={this.props.user}/>
@@ -29,9 +31,9 @@ class User extends React.Component{
                         <span>Write message</span>
                     </div>
                     { this.props.user.followed ?
-                        <button onClick={() => this.onChangeFollow()}>followed</button>
+                        <button onClick={() => setUnFollow(id,this.onChangeFollow)}>followed</button>
                         :
-                        <button onClick={() => this.onChangeFollow()}>unfollowed</button>
+                        <button onClick={() => setFollow(id,this.onChangeFollow)}>unfollowed</button>
                     }
                 </div>
             </div>
