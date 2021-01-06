@@ -12,7 +12,13 @@ function Users(props) {
     for (let i = 1; i <= 5; i++) {
         pages.push(i);
     }
-    const users = props.users.map(user => <User user={user} changeFollow={props.changeFollow}/>)
+    const users = props.users.map(user =>
+    {
+     return ( <User user={user}
+              toggleIsFollowIngProgress={props.toggleFollowInProgress}
+              isFollowInProgress={props.isFollowInProgress}
+              changeFollow={props.changeFollow}/>)
+    })
 
     return (
         <div className={styles.content}>

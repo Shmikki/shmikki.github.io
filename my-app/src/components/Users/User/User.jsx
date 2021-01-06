@@ -8,16 +8,17 @@ class User extends React.Component{
     constructor(props) {
         super(props);
         this.onChangeFollow = this.onChangeFollow.bind(this);
+        this.id = this.props.user.id;
     }
 
     onChangeFollow(id){
         this.props.changeFollow(id);
+        this.props.toggleIsFollowIngProgress(false,id);
     }
 
 
 
     render(){
-        const id = this.props.user.id;
         return(
             <div className={styles.info}>
                 <UserAvatar id={this.props.user.id} photos={this.props.user}/>
@@ -31,9 +32,15 @@ class User extends React.Component{
                         <span>Write message</span>
                     </div>
                     { this.props.user.followed ?
-                        <button onClick={() => setUnFollow(id,this.onChangeFollow)}>followed</button>
+                        <button disabled={this.props.isFollowInProgress.some((userID) => userID === this.id)}
+                                onClick={() => {
+                                    this.props.toggleIsFollowIngProgress(true, this.id);
+                                    setUnFollow(this.id,this.onChangeFollow)}}>followed</button>
                         :
-                        <button onClick={() => setFollow(id,this.onChangeFollow)}>unfollowed</button>
+                        <button disabled={this.props.isFollowInProgress.some((userID) => userID  === this.id)}
+                            onClick={() =>{
+                                this.props.toggleIsFollowIngProgress(true, this.id);
+                                setFollow(this.id,this.onChangeFollow)}}>unfollowed</button>
                     }
                 </div>
             </div>
