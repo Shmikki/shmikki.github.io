@@ -6,19 +6,19 @@ import Paginator from "../common/Paginator/Paginator";
 
 
 function Users(props) {
-    const users = props.users.map(user =>
-    {
-     return ( <User user={user}
-              toggleIsFollowIngProgress={props.toggleFollowInProgress}
-              isFollowInProgress={props.isFollowInProgress}
-              changeFollow={props.changeFollow} />)
+    const users = props.users.map(user => {
+        return (<User user={user}
+                      isFollowInProgress={props.isFollowInProgress}
+                      follow={props.follow}
+                      unFollow={props.unFollow}
+        />)
     })
 
     return (
         <div className={styles.content}>
             <Paginator onChangeCurrentPage={props.onChangeCurrentPage} totalItemsCount={props.totalCountUsers}
                        currentPage={props.currentPage} pageSize={props.pageSize}/>
-            {props.isFetching ? <Preloader classname={styles.preloader} /> : users}
+            {props.isFetching ? <Preloader classname={styles.preloader}/> : users}
         </div>
 
     );
