@@ -53,7 +53,8 @@ const initialState = {
     users :[],
     currentPage: 1,
     pageSize: 10,
-    totalCountUsers: 0,
+    portion : 10,
+    totalCountUsers: 40,
     isFetching: true,
     isFollowInProgress: []
 }
