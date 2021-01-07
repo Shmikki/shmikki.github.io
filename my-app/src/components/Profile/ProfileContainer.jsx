@@ -1,5 +1,5 @@
 import {
-    addPostActionCreator,
+    addPostActionCreator, getProfileThunkCreator,
     setUserProfileActionCreator,
     updatePostTextActionCreator
 } from "../../redux/profileReducer";
@@ -14,7 +14,7 @@ class ProfileContainer extends React.Component {
 
     componentDidMount() {
         let userID = this.props.match.params.userID ? this.props.match.params.userID : 13777;
-        getProfile(userID).then(profile => this.props.setUserProfile(profile));
+        this.props.getProfile(userID);
     }
 
     render() {
@@ -39,7 +39,7 @@ const mapDispatchToProps = (dispatch) => {
     return {
         addPost: () => dispatch(addPostActionCreator()),
         updatePostText: (text) => dispatch(updatePostTextActionCreator(text)),
-        setUserProfile: (profile) => dispatch(setUserProfileActionCreator(profile))
+        getProfile : (profileID) => dispatch(getProfileThunkCreator(profileID))
     }
 }
 

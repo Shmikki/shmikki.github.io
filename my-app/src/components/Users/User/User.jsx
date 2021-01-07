@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./User.module.css";
 import UserAvatar from "./UserAvatar/UserAvatar";
-import {setFollow, setUnFollow} from "../../../api/api";
 
 const User = (props) => {
 

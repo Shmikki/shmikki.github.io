@@ -1,18 +1,13 @@
 import {connect} from "react-redux";
 import React from "react";
-import axios from "axios";
-import {setUserDataActionCreator} from "../../redux/authReducer";
+import { getAuthThunkCreator } from "../../redux/authReducer";
 import Header from "./Header";
-import {getAuth} from "../../api/api";
 
 
 class HeaderContainer extends React.Component {
 
     componentDidMount() {
-        getAuth()
-            .then(data => {
-                this.props.setUserData(data.data.id,data.data.email,data.data.login)
-            })
+        this.props.getAuth()
     }
 
     render() {
@@ -30,7 +25,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        setUserData: (userID,email,login) => dispatch(setUserDataActionCreator(userID, email, login))
+        getAuth: () => dispatch(getAuthThunkCreator())
     }
 }
 
