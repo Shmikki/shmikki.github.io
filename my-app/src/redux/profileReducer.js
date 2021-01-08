@@ -3,6 +3,7 @@ import { userAPI} from "../api/api";
 const UPDATE_POST_TEXT = "UPDATE_POST_TEXT",
     ADD_POST = "ADD_POST",
     SET_USER_PROFILE = "SET_USER_PROFILE";
+const TOGGLE_IS_FETCHING = "TOGGLE_IS_FETCHING";
 
 const initialState = {
     posts: [
@@ -11,7 +12,8 @@ const initialState = {
         {src: "...", likes: 23, post_text: "Maybe you want go walk?"}
     ],
     newPostText: "",
-    profile: {}
+    profile: {},
+    isFetching: true,
 };
 
 
@@ -28,6 +30,13 @@ export const addPostActionCreator = () => {
     }
 }
 
+export function toggleIsFetchingActionCreator(toggle) {
+    return {
+        type: TOGGLE_IS_FETCHING,
+        toggle: toggle
+    }
+}
+
 export const setUserProfileActionCreator = (profile) => {
     return {
         type: SET_USER_PROFILE,
@@ -38,9 +47,10 @@ export const setUserProfileActionCreator = (profile) => {
 
 export const getProfileThunkCreator = (profileID) => {
     return (dispatch) => {
-
+        dispatch(toggleIsFetchingActionCreator(true))
        userAPI.getProfile(profileID).then(response => {
            dispatch(setUserProfileActionCreator(response.data))
+           dispatch(toggleIsFetchingActionCreator(false))
        })
     }
 }
@@ -58,6 +68,9 @@ export const profileReducer = (state = initialState, action) => {
             return newState;
         case SET_USER_PROFILE:
             newState.profile = action.profile;
+            return newState;
+        case TOGGLE_IS_FETCHING:
+            newState.isFetching = action.toggle;
             return newState;
         default:
             return state;

@@ -9,6 +9,8 @@ import axios from "axios";
 import Profile from "./Profile";
 import {withRouter} from "react-router-dom";
 import {getProfile} from "../../api/api";
+import {compose} from "redux";
+import {withAuthRedirect} from "../../hoc/withAuthRedirect";
 
 class ProfileContainer extends React.Component {
 
@@ -21,7 +23,7 @@ class ProfileContainer extends React.Component {
         return (
             <Profile profile={this.props.profile} newPostText={this.props.newPostText}
                      updatePostText={this.props.updatePostText}
-                     addPost={this.props.addPost} posts={this.props.posts}/>
+                     addPost={this.props.addPost} posts={this.props.posts} isFetching={this.props.isFetching}/>
         )
     }
 }
@@ -31,7 +33,8 @@ const mapStateToProps = (state) => {
         posts: state.profilePage.posts,
         newPostText: state.profilePage.newPostText,
         profile: state.profilePage.profile,
-        myProfileId: state.auth.id
+        myProfileId: state.auth.id,
+        isFetching: state.profilePage.isFetching
     }
 };
 
@@ -43,6 +46,8 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-const withRouterProfileUrl = withRouter(ProfileContainer);
-
-export default connect(mapStateToProps, mapDispatchToProps)(withRouterProfileUrl);
+export default compose(
+    withAuthRedirect,
+    withRouter,
+    connect(mapStateToProps, mapDispatchToProps)
+)(ProfileContainer)

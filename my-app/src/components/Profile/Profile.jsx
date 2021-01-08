@@ -3,15 +3,15 @@ import styles from "./Pfofile.module.css"
 import User from "./User/User";
 import React from "react";
 import NewPost from "./NewPost/NewPost";
+import Preloader from "../common/Preloader/Preloader";
 
 
 
 
 function Profile(props){
-    
         return (
             <div className={styles.content}>
-                <User fullName={props.profile.fullName} />
+                    {props.isFetching ? <Preloader /> : <User  profile={props.profile}/>}
                 <NewPost
                     newPostText={props.newPostText}
                     updatePostText={props.updatePostText}

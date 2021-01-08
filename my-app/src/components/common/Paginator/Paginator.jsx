@@ -20,8 +20,8 @@ function Paginator(props){
             </button>
            {pages.filter(p => p >= leftStepPortion && p <= rightStepPortion).map(p => {
                return(
-               <span key={p} onClick={() => props.onChangeCurrentPage(p)}
-               className={p === props.currentPage? `${styles.currentPage}` : `${styles.page}`}>
+               <span key={p} onClick={() => props.onChangeCurrentPage(p) }
+               className={p === props.currentPage ? `${styles.currentPage}` : `${styles.page}`}>
                {p}</span>)
            })}
            <button onClick={() => setPortionNumber(portionNumber + 1)} className={styles.switchButton}>

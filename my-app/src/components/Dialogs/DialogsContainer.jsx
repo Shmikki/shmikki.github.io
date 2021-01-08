@@ -4,7 +4,14 @@ import {
     sendMessageActionController,
     updateMessageActionController,
 } from "../../redux/dialogsReducer";
+import {compose} from "redux";
+import {withAuthRedirect} from "../../hoc/withAuthRedirect";
+import React from "react";
 
+class DialogsContainer extends React.Component{
+
+    render(){ return <Dialogs DialogsPage={this.props.DialogsPage} />}
+}
 
 
 const mapStateToProps = state => {
@@ -23,5 +30,7 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-const DialogsContainer = connect(mapStateToProps, mapDispatchToProps)(Dialogs);
-export default DialogsContainer;
+export default compose(
+    withAuthRedirect,
+    connect(mapStateToProps, mapDispatchToProps)
+)(DialogsContainer);

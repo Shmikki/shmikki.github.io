@@ -54,7 +54,7 @@ export const getUsersThunkCreator = (currentPage = 1, pageSize = 10) => {
     return (dispatch) => {
 
         dispatch(toggleIsFetchingActionCreator(true));
-
+        dispatch(changeCurrentPageActionCreator(currentPage));
         userAPI.getUsers(currentPage, pageSize)
             .then(data => {
                 dispatch(setUsersActionCreator(data.items));
