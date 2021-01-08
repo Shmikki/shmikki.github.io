@@ -6,7 +6,7 @@ import React from "react";
 class Navbar extends React.Component{
     render() {
         return (
-            <div className={styles.navbar}>
+            <div className={styles.content}>
                 <navbar className={styles.menu}>
                     <div className={styles.menu_item}>
                         <NavLink to="/profile" className={styles.navLink}>

@@ -1,4 +1,4 @@
-.header{
+.main{
     display: flex;
     z-index: 99999;
     background: #5b7cb5;
@@ -9,7 +9,7 @@
     justify-content: center;
 }
 
-.header__content{
+.content{
     display: flex;
     justify-content: space-between;
     align-items: center;

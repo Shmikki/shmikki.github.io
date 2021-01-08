@@ -1,4 +1,4 @@
-.User{
+.info{
     display: flex;
     width: 100%;
     margin-top:10px;
@@ -14,7 +14,11 @@
     height: 1px;
 }
 
-.UserContent{
+.message{
+    margin-bottom: 20px;
+}
+
+.content{
     display: flex;
     flex-direction: column;
     justify-content: space-around;

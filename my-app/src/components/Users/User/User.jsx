@@ -2,44 +2,31 @@ import React from "react";
 import styles from "./User.module.css";
 import UserAvatar from "./UserAvatar/UserAvatar";
 
-class User extends React.Component{
+const User = (props) => {
 
-    constructor(props) {
-        super(props);
-        this.id = this.props.user.id;
-    }
 
-    followed(follow){
-        return (follow ?
-            <button onClick={() => this.onChangeFollow(this.id)}>followed</button>
-            :
-            <button onClick={() => this.onChangeFollow(this.id)}>unfollowed</button>);
-    }
-
-    onChangeFollow(id){
-        this.props.changeFollow(id);
-    }
-
-    render(){
-        return(
-            <div className={styles.User}>
-                <UserAvatar id={this.props.user.id} AvatarSrc={this.props.user.AvatarSrc}/>
-                <div className={styles.UserContent}>
-                    <div className={styles.UserName}>
+    return (
+        <div className={styles.info}>
+            <UserAvatar id={props.user.id} photos={props.user}/>
+            <div className={styles.UserContent}>
+                <div className={styles.name}>
                     <span>
-                        {this.props.user.firstName} {this.props.user.lastName}
+                        {props.user.name}
                     </span>
-                    </div>
-                    <div className={styles.UserMessage}>
-                        <span>Write message</span>
-                    </div>
-                    {
-                        this.followed(this.props.user.follow)
-                    }
                 </div>
+                <div className={styles.message}>
+                    <span>Write message</span>
+                </div>
+                {props.user.followed ?
+                    <button disabled={props.isFollowInProgress.some((userID) => userID === props.user.id)}
+                            onClick={() => props.unFollow(props.user.id)}>followed</button>
+                    :
+                    <button disabled={props.isFollowInProgress.some((userID) => userID === props.user.id)}
+                            onClick={() => props.follow(props.user.id)}>unfollowed</button>
+                }
             </div>
-        );
-    }
+        </div>
+    );
 }
 
 export default User;

@@ -1,13 +1,8 @@
-.content{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 20px;
-}
-
 .pages{
+    margin: 0 auto;
+    width: 80%;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .page{
@@ -19,7 +14,7 @@
     text-decoration: underline;
 }
 
-.selectedPage{
+.currentPage{
     margin-right: 10px;
     font-weight: 800;
 }

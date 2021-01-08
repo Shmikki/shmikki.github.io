@@ -2,15 +2,8 @@
     display: flex;
     font-size: 15px;
     flex-direction: row;
-    align-items: center;
-}
-
-.avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 60px;
-    margin-left: 50px;
+    border-bottom: 1px solid #ababab;
+    padding-bottom: 10px;
 }
 
 .info {

@@ -1,23 +1,17 @@
 import styles from "./User.module.css"
 import React from "react";
+import UserAvatar from "./UserAvatar/UserAvatar";
 
 
-class User extends React.Component {
-    render() {
-        return (
-            <div className={styles.profile}>
-                <div className={styles.avatar}>
-                    <img src={this.props.src_avatar} alt="ava"/>
-                </div>
-                <div className={styles.info}>
-                    <div className={styles.name}>{this.props.name}</div>
-                    <div className={styles.birthday}>{this.props.birthday}</div>
-                    <div className={styles.city}>{this.props.city}</div>
-                    <div className={styles.education}>{this.props.education}</div>
-                </div>
+function User(props) {
+    return (
+        <div className={styles.profile}>
+            <UserAvatar id={props.profile.userId} photos={props.profile.photos}/>
+            <div className={styles.info}>
+                <div className={styles.name}>{props.profile.fullName}</div>
             </div>
-        );
-    }
+        </div>
+    );
 }
 
 export default User;
