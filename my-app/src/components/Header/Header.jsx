@@ -16,7 +16,7 @@ const Header = (props) => {
                 <NavLink  to="/profile"> <img src={Logo} alt="logo" className={styles.logo_image} /> </NavLink>
             </div>
             <Search />
-            <Auth userID={props.userID}/>
+            <Auth logOut={props.logOut} userID={props.userID}/>
             </div>
         </header>
         );

@@ -9,7 +9,7 @@ import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import ProfileContainer from "./components/Profile/ProfileContainer";
 import UsersContainer from "./components/Users/UsersContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
-import {Login} from "./components/Login/Login";
+import LoginContainer from "./components/Login/LoginContainer";
 
 
 function App(props) {
@@ -23,7 +23,7 @@ function App(props) {
             <Route path={"/news"} render={() => <News/>}/>
             <Route path={"/music"} render={() => <Music/>}/>
             <Route path={"/settings"} render={() => <Settings/>}/>
-            <Route path={"/login"} render={() => <Login />}/>
+            <Route path={"/login"} render={() => <LoginContainer />}/>
         </div>
     );
 }

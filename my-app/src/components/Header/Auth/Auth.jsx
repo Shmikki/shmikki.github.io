@@ -1,8 +1,8 @@
-import {NavLink} from "react-router-dom";
+import  {Redirect , NavLink} from "react-router-dom";
 
 const Auth = (props) => {
     return (
-        props.userID ? <span>Logout</span> : <NavLink to={"login"}>Login </NavLink>
+        props.userID ? <span onClick={() => {props.logOut();  <Redirect to={"/login"} />} }>Logout</span> : <NavLink to={"login"}>Login </NavLink>
     )
 }
 

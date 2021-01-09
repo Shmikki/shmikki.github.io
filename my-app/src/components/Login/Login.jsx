@@ -1,4 +1,10 @@
-export function Login(props){
+import {LoginForm} from "./Form/LoginForm";
 
-    return <h1>Login</h1>
+export default function Login(props){
+
+    return (
+        <div>
+            <h1>Login</h1>
+            <LoginForm logIn={props.logIn} />
+        </div>)
 }
