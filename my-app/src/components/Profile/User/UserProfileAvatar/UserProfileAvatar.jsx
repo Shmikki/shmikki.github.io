@@ -1,18 +1,18 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
-import styles from "./UserAvatar.module.css";
+import styles from "./UserProfileAvatar.module.css";
 import userImage from "../../../../assets/images/user-image.png";
 
-function UserAvatar(props){
+function UserProfileAvatar(props){
     return (
         <div className={styles.UserAvatar}>
             <NavLink to={`/profile/${props.id}`}>
                 <img src={props.photos.small ? props.photos.small : userImage}
-                     className={styles.UserAvatar_img}/>
+                     className={styles.img}/>
             </NavLink>
         </div>
     )
 
 }
 
-export default UserAvatar;
+export default UserProfileAvatar;

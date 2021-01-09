@@ -11,7 +11,7 @@ import Preloader from "../common/Preloader/Preloader";
 function Profile(props){
         return (
             <div className={styles.content}>
-                    {props.isFetching ? <Preloader /> : <User  profile={props.profile}/>}
+                    {props.isFetching ? <Preloader /> : <User  profile={props.profile} status={props.status} setStatus={props.setStatus} />}
                 <NewPost
                     newPostText={props.newPostText}
                     updatePostText={props.updatePostText}
