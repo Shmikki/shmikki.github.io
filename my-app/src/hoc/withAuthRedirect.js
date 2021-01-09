@@ -4,7 +4,7 @@ import {Redirect} from "react-router-dom";
 
 let mapStateToPropsForRedirect = (state) => {
     return {
-        isAuth: state.auth.login
+        isAuth: state.auth.isAuth
     }
 }
 
