@@ -14,7 +14,6 @@ const initialState = {
         {text: "How are you?", date: new Date().toDateString()},
         {text: "What about my money?", date: new Date().toDateString()}
     ],
-    newMessageText: ""
 };
 
 
@@ -22,10 +21,7 @@ export const dialogReducer = (state = initialState, action) => {
     const newState = Object.assign({},state);
     switch (action.type) {
         case SEND_MESSAGE :
-            let text = newState.newMessageText;
-            newState.newMessageText = '';
-            newState.messages.push({text: text, date: new Date().toDateString()});
-            return newState;
+            return {...state , messages: [...state.messages, {text: action.text, date: new Date().toDateString()},]};
         case UPDATE_MESSAGE :
             newState.newMessageText = action.text;
             return newState;
@@ -34,15 +30,9 @@ export const dialogReducer = (state = initialState, action) => {
     }
 }
 
-export const sendMessageActionController = () =>{
+export const sendMessageActionController = (text) =>{
     return {
-        type : SEND_MESSAGE
-    }
-}
-
-export const updateMessageActionController = (text) =>{
-    return {
-        type : UPDATE_MESSAGE,
+        type : SEND_MESSAGE,
         text: text
     }
 }

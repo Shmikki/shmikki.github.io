@@ -13,8 +13,6 @@ function Profile(props){
             <div className={styles.content}>
                     {props.isFetching ? <Preloader /> : <User  profile={props.profile} status={props.status} setStatus={props.setStatus} />}
                 <NewPost
-                    newPostText={props.newPostText}
-                    updatePostText={props.updatePostText}
                     addPost={props.addPost}
                 />
                 {props.posts.map(item => <Post post_text={item.post_text} likes={item.likes} src={item.src} />)}

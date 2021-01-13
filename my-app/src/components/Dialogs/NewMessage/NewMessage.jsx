@@ -1,34 +1,31 @@
 import React from "react";
 import styles from "./NewMessage.module.css";
+import {Field, Form} from "react-final-form";
 
 
-
-
-class NewMessage extends React.Component{
-
-    constructor(props) {
-        super(props);
-        this.MyRef = React.createRef();
-    }
-
-
-    onSendMessage(){
-       this.props.sendMessage();
-    }
-
-    onChangeMessage(){
-        let text = this.MyRef.current.value;
-        this.props.updateMessageBody(text);
-    }
-
-    render(){
-        return(
-            <div className={styles.form}>
-                <textarea name="" id="" ref={this.MyRef} onChange={() => this.onChangeMessage() } value={ this.props.newMessageText }  className={styles.form__area} placeholder="Write message" />
-                <button className={styles.form__sendBtn} onClick={() => this.onSendMessage()}>Send</button>
-            </div>
-        )
-    }
+const NewMessage = (props) =>{
+    return(
+        <Form
+            onSubmit={(values) => {
+                props.sendMessage(values.Message);
+                values.Message = ""
+            }
+            }
+            initialValues={
+                {
+                    Message: ""
+                }
+            }
+            render={({ handleSubmit }) => (
+                <form onSubmit={handleSubmit} className={styles.form}>
+                    <div className={styles.form__area}>
+                        <Field name="Message" component="textarea"  placeholder="write your message" className={styles.area} />
+                    </div>
+                    <button type="submit" className={styles.sendBtn}>Send</button>
+                </form>
+            )}
+        />
+    )
 }
 
 export default NewMessage;

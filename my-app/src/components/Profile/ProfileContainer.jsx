@@ -2,8 +2,7 @@ import {
     addPostActionCreator,
     getProfileStatusThunkCreator,
     getProfileThunkCreator,
-    setProfileStatusThunkCreator,
-    updatePostTextActionCreator
+    setProfileStatusThunkCreator
 } from "../../redux/profileReducer";
 import {connect} from "react-redux";
 import React from "react";
@@ -22,8 +21,7 @@ class ProfileContainer extends React.Component {
 
     render() {
         return (
-            <Profile profile={this.props.profile} newPostText={this.props.newPostText}
-                     updatePostText={this.props.updatePostText}
+            <Profile profile={this.props.profile}
                      addPost={this.props.addPost} posts={this.props.posts} isFetching={this.props.isFetching}
                      status={this.props.status}
                      setStatus={this.props.setProfileStatus}
@@ -45,8 +43,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        addPost: () => dispatch(addPostActionCreator()),
-        updatePostText: (text) => dispatch(updatePostTextActionCreator(text)),
+        addPost: (text) => dispatch(addPostActionCreator(text)),
         getProfile : (profileID) => dispatch(getProfileThunkCreator(profileID)),
         getProfileStatus: (profileID) => dispatch(getProfileStatusThunkCreator(profileID)),
         setProfileStatus : (status) => dispatch(setProfileStatusThunkCreator(status))

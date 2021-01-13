@@ -4,7 +4,6 @@ import {logIn} from "../../redux/authReducer";
 import {connect} from "react-redux";
 import Login from "./Login";
 import { Redirect } from "react-router-dom";
-import {withAuthRedirect} from "../../hoc/withAuthRedirect";
 
 class LoginContainer extends React.Component{
 
