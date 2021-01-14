@@ -2,7 +2,6 @@ import {connect} from "react-redux";
 import Dialogs from "./Dialogs";
 import {
     sendMessageActionController,
-    updateMessageActionController,
 } from "../../redux/dialogsReducer";
 import {compose} from "redux";
 import {withAuthRedirect} from "../../hoc/withAuthRedirect";
@@ -10,7 +9,7 @@ import React from "react";
 
 class DialogsContainer extends React.Component{
 
-    render(){ return <Dialogs DialogsPage={this.props.DialogsPage} />}
+    render(){ return <Dialogs DialogsPage={this.props.DialogsPage} sendMessage={this.props.sendMessage} />}
 }
 
 
@@ -21,12 +20,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        updateMessageBody: (text) => {
-            dispatch(updateMessageActionController(text))
-        },
-        sendMessage: () => {
-            dispatch(sendMessageActionController())
-        }
+        sendMessage: (text) => dispatch(sendMessageActionController(text))
     }
 }
 

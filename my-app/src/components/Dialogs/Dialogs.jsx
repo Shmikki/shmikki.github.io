@@ -16,9 +16,7 @@ function Dialogs(props) {
             <div className={styles.vl}></div>
             <div className={styles.messages}>
                 {props.DialogsPage.messages.map(item => <Message text={item.text} date={item.date}/>)}
-                <NewMessage newMessageText={props.DialogsPage.newMessageText}
-                            updateMessageBody={props.updateMessageBody}
-                            sendMessage={props.sendMessage}/>
+                <NewMessage sendMessage={props.sendMessage}/>
             </div>
         </div>
     );
