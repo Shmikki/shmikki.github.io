@@ -1,37 +1,69 @@
-import { Form, Field } from 'react-final-form';
-import styles from "./LoginForm.module.css";
+import React from "react";
+import  "./LoginForm.module.css";
+import styled from "styled-components";
+import validator from "validator";
+import {Form} from "../../common/FormControls/FormControls";
+import {Input} from "../../common/FormControls/Input/Input";
+
+const Group = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: fit-content;
+  margin-bottom: 10px;
+`;
+
+const FormWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const Label = styled.div`
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+`;
+
+const Button = styled.button`
+  color: #5b7cb5;
+  font-size: 1em;
+  margin: 5px;
+  padding: 0.25em 1em;
+  border: 2px solid #5b7cb5;
+  border-radius: 3px;
+  display: block;
+  width: 100%;
+`;
+
+
+
 
 export const LoginForm = (props) => (
-    <Form
-        onSubmit={(values) => props.logIn(values.Email,values.password,values.RememberMe)}
-        initialValues={
-            {
-                Email: " " ,
-                password: "",
-                RememberMe : false
-            }
-        }
-        render={({ handleSubmit }) => (
-            <form onSubmit={handleSubmit} className={styles.formContent}>
-                <div className={styles.formItem}>
-                    <label>Email</label>
-                    <Field name="Email" component="input" type="email" placeholder="email" />
-                </div>
-                <div className={styles.formItem}>
-                    <label>Password</label>
-                    <Field name="password" component="input" type="password" placeholder="Password" />
-                </div>
-                <div className={styles.formCheckbox}>
-                    <label> Remember me</label>
-                        <Field
-                            name="rememberMe"
-                            component="input"
-                            type="checkbox"
-                            value="true"
-                        />{" "}
-                </div>
-                <button type="submit" className={styles.loginBtn}>Login</button>
-            </form>
+    <Form onSubmit={(values) => props.logIn(values.Email,values.password,values.RememberMe)}>
+        {props => (
+            <FormWrapper>
+                <Group>
+                    <Label>Username</Label>
+                    <Input
+                        name="Email"
+                        placeholder="Email"
+                        validate={v =>
+                            !validator.isEmail(v || "") && "Please Enter a Valid Email!"
+                        }
+                    />
+                </Group>
+                <Group>
+                    <Label>Password</Label>
+                    <Input name="password" type="password" placeholder="Password" validate={v => !(v || "") && "Please Enter a valid Password"} />
+                </Group>
+                <Group>
+                    <Label>Remember me</Label>
+                    <input type="checkbox" name="RememberMe" value="true" />
+                </Group>
+                    <Button  type="submit" primary>Login</Button>
+            </FormWrapper>
         )}
-    />
+    </Form>
 )
